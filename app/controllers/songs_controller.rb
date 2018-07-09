@@ -47,6 +47,9 @@ class SongsController < ApplicationController
     redirect_to songs_path
   end
 
+  def artist_name
+      self.artist.name
+
   private
 
   def song_params
