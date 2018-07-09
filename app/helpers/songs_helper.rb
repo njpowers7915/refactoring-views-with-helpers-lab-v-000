@@ -1,6 +1,8 @@
 module SongsHelper
     def artist_name(song)
-        song.artist.name
+        if song != nil
+            song.artist.name
+        end
     end
 
     def artist_name=(name)
