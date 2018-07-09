@@ -682,3 +682,25 @@ Processing by SongsController#create as HTML
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.3ms)[0m  INSERT INTO "songs" ("title", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Levels"], ["artist_id", 3], ["created_at", "2018-07-09 14:44:38.484114"], ["updated_at", "2018-07-09 14:44:38.484114"]]
   [1m[36m (57.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.165.109:50864/songs/7
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Avicii"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to 
+Completed 500 Internal Server Error in 98353ms (ActiveRecord: 58.9ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/songs_controller.rb:22:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.2ms)
+
+
+Started POST "/songs" for 96.242.130.35 at 2018-07-09 14:45:29 +0000
+Cannot render console from 96.242.130.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vDqxrqKMNvycTJ74/L5DY74O17DGtM4DPK0joVRmShx8iZkW3nj1XOC0V2FiwUC8IdYmfrmbbXV8Z6Cuc4Nnfw==", "song"=>{"title"=>"Levels", "artist_name"=>"Avicii"}, "commit"=>"Create Song"}
+Completed   in 11532ms (ActiveRecord: 0.0ms)
