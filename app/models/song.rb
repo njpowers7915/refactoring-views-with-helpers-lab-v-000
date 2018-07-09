@@ -5,7 +5,7 @@ class Song < ActiveRecord::Base
 
   def artist_name
      if self.artist != nil
-          self.artist.name
+          return self.artist.name
       end
   end
 
