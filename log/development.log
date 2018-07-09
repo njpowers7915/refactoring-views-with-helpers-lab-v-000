@@ -848,3 +848,22 @@ Processing by SongsController#show as HTML
   [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 5]]
   Rendered songs/show.html.erb within layouts/application (1.1ms)
 Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/songs" for 96.242.130.35 at 2018-07-09 14:52:08 +0000
+Cannot render console from 96.242.130.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/njpowers7915/refactoring-views-with-helpers-lab-v-000/app/helpers/songs_helper.rb:13: syntax error, unexpected !=
+        if artist_name(song) != nil && != ''
+                                         ^
+/home/njpowers7915/refactoring-views-with-helpers-lab-v-000/app/helpers/songs_helper.rb:19: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/helpers/songs_helper.rb:13: syntax error, unexpected !=
+  app/helpers/songs_helper.rb:19: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/songs_controller.rb:3:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.6ms)
