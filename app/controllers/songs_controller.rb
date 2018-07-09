@@ -19,7 +19,7 @@ class SongsController < ApplicationController
     else
       render :new
     end
-    pry
+    binding.pry
   end
 
   def edit
