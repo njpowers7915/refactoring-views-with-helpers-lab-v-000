@@ -15,7 +15,6 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
-    binding.pry
     @artist = Artist.find_or_create_by(name: params["song"]["artist_name"])
     @song.artist = @artist
     if @song.save
