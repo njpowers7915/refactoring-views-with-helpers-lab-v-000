@@ -6,7 +6,7 @@ module SongsHelper
     end
 
     def artist_name=(name)
-        song.artist.name = name
+        self.artist.name = name
     end
 
     def display_artist(song)
