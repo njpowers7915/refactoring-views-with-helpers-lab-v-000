@@ -3,10 +3,14 @@ class Song < ActiveRecord::Base
 
   include SongsHelper
 
-  #def artist_name
-  #end
+  def artist_name
+     if self.artist != nil
+          self.artist.name
+      end
+  end
 
-  #def artist_name=(name)
-  #end
+  def artist_name=(name)
+      self.artist.name = name
+  end
 
 end
