@@ -728,3 +728,7 @@ Completed 302 Found in 22052ms (ActiveRecord: 3.8ms)
 
 Started GET "/songs/8" for 96.242.130.35 at 2018-07-09 14:47:36 +0000
 Cannot render console from 96.242.130.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
