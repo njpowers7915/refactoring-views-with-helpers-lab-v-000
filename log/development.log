@@ -678,3 +678,7 @@ Started POST "/songs" for 96.242.130.35 at 2018-07-09 14:43:51 +0000
 Cannot render console from 96.242.130.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by SongsController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"vDqxrqKMNvycTJ74/L5DY74O17DGtM4DPK0joVRmShx8iZkW3nj1XOC0V2FiwUC8IdYmfrmbbXV8Z6Cuc4Nnfw==", "song"=>{"title"=>"Levels", "artist_name"=>"Avicii"}, "commit"=>"Create Song"}
+  [1m[35mArtist Load (0.3ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Avicii"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "songs" ("title", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Levels"], ["artist_id", 3], ["created_at", "2018-07-09 14:44:38.484114"], ["updated_at", "2018-07-09 14:44:38.484114"]]
+  [1m[36m (57.0ms)[0m  [1mcommit transaction[0m
