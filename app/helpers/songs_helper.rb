@@ -1,7 +1,7 @@
 module SongsHelper
-    def artist_name(song)
-        if song.artist != nil
-            song.artist.name
+    def artist_name
+        if self.artist != nil
+            self.artist.name
         end
     end
 
